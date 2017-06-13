@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: #ECD9AE;
+    font-family: 'Montez', cursive;
+}
+
+body.Gryffindor {
+    background: #5B1714;
+}
+
+body.Slytherin {
+    background: #415C36;
+}
+
+body.Hufflepuff {
+    background: #D89C00;
+}
+
+body.Ravenclaw {
+    background: #005F7A;
+}
+
+.background {
+    position: fixed;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background: url(crest.png) center center no-repeat;
+    background-size: contain;
+}
+
+form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    padding: 20px;
+    background: #F0F0F0;
+    font-size: 30px;
+    transition: opacity 1s;
+}
+
+button {
+    background: #907047;
+    color: #fff;
+    border: 0;
+}
+
+.fade-out {
+    opacity: 0;
+}
