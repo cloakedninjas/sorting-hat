@@ -52,6 +52,12 @@ body.Ravenclaw {
     transition: opacity 1s;
 }
 
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 button {
     background: #333;
     color: #fff;
