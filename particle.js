@@ -21,8 +21,6 @@ Particle.prototype.attract = function(x, y) {
   var dy = y - this.y;
   var distance = Math.sqrt(dx * dx + dy * dy);
 
-  console.log(distance);
-
   if (distance < 1) {
     var invX = Math.random() > 0.5 ? 1 : -1;
     var invY = Math.random() > 0.5 ? 1 : -1;

@@ -2,6 +2,8 @@ function App () {
   this.input = document.getElementById('name');
   this.form = document.getElementById('form');
   this.result = document.getElementById('result');
+  this.nameLabel = document.getElementById('name-label');
+  this.quote = document.getElementById('quote');
   this.houseName = document.getElementById('housename');
 
   this.canvas = document.getElementById('canvas');
@@ -33,7 +35,7 @@ App.prototype = {
     var result,
         isForced = App.FORCED[this.input.value];
 
-    if (isForced) {
+    if (isForced !== undefined) {
       result = isForced;
     } else {
       result = this.encodeString(this.input.value);
@@ -47,9 +49,10 @@ App.prototype = {
     this.form.classList.add('fade-out');
     this.result.style.display = 'block';
     this.houseName.textContent = houseResult;
+    this.nameLabel.textContent = this.input.value;
+    this.quote.textContent = App.QUOTES[result];
 
     setTimeout(function () {
-
       this.result.classList.add('fade-in');
     }.bind(this), 1000);
 
@@ -80,10 +83,17 @@ App.prototype = {
 };
 
 App.HOUSES = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
+App.QUOTES = [
+    'With a lion as its crest and Professor McGonagall at its head, Gryffindor is the house which most values the virtues of courage, bravery and determination',
+    'Slytherin produces more than its share of Dark wizards, but also turns out leaders who are proud, ambitious and cunning. Merlin is one particularly famous Slytherin',
+    'Hufflepuffs value hard work, patience, loyalty, and fair play. The house has produced its share of great wizards – not least Newt Scamander, author of Fantastic Beasts and Where to Find Them',
+    'Ravenclaws prize wit, learning, and wisdom. It\'s an ethos etched into founder Rowena Ravenclaw diadem: "wit beyond measure is man\'s greatest treasure"'
+];
 App.FORCED = {
   'Ella': 3,
   'Cynthia': 3,
-  'Will': 1
+  'Will': 1,
+  'Sarah': 0
 };
 
 document.addEventListener('DOMContentLoaded', function () {

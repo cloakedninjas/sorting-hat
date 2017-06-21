@@ -70,6 +70,11 @@ input {
     font-size: 16px;
 }
 
+input, button {
+    position: relative;
+    z-index: 2;
+}
+
 h2 {
     margin: 0;
 }
@@ -85,13 +90,17 @@ h2 {
 #result {
     display: none;
     opacity: 0;
-    height: 190px;
+    height: 410px;
+}
+
+#result p {
+    margin: 0 0 20px 0;
 }
 
 #result.fade-in {
     opacity: 1;
 }
 
-#result.visible {
-
+#quote {
+    font-size: 30px;
 }
