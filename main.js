@@ -93,7 +93,9 @@ App.FORCED = {
   'Ella': 3,
   'Cynthia': 3,
   'Will': 1,
-  'Sarah': 0
+  'Sarah': 0,
+  'Jo': 3,
+  'Therese': 0
 };
 
 document.addEventListener('DOMContentLoaded', function () {
